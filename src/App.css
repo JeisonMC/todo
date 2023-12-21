@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+li{
+  display: flex;
+  border-top: 1px solid #653bff;
+  border-bottom: 1px solid #653bff;
+  margin-bottom: 3px;
+  min-width: 200px;
+  align-content: 'center';
+}
+
+.inputStyle {
+  display: flex;
+  justify-self: auto;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #747bff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+span{
+  margin-top: auto;
+  margin-bottom: auto;
+}
