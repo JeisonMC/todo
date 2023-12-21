@@ -35,7 +35,8 @@ const App = () => {
 
       {elementos.map((elemento, index) => (
         <li key={index}>
-          <input type="checkbox" />&nbsp;&nbsp;
+          <input type="checkbox" />
+          &nbsp;&nbsp;
           <span>{elemento}</span>&nbsp;&nbsp;
           <button onClick={() => eliminarElemento(index)}>Eliminar</button>
         </li>
