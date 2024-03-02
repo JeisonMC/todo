@@ -23,22 +23,36 @@ const App = () => {
       <h1>My todos</h1>
       <label>
         <input
+          className="inputStyle"
           type="text"
           name="search"
           autoComplete="off"
           value={nuevoElemento}
           onChange={(ev) => setNuevoElemento(ev.target.value)}
         ></input>
-        &nbsp;
+        &nbsp;&nbsp;
         <button onClick={agregarElemento}>Save</button>
       </label>
 
       {elementos.map((elemento, index) => (
         <li key={index}>
-          <input type="checkbox" />
-          &nbsp;&nbsp;
-          <span>{elemento}</span>&nbsp;&nbsp;
-          <button onClick={() => eliminarElemento(index)}>Eliminar</button>
+          <table>
+            <tr>
+              <td style={{ border: "none" }}>
+                <input type="checkbox" />
+              </td>
+              &nbsp;&nbsp;
+              <td className="tdF">
+                <span>{elemento}</span>
+              </td>
+              &nbsp;&nbsp;
+              <td style={{ border: "none" }}>
+                <button onClick={() => eliminarElemento(index)}>
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          </table>
         </li>
       ))}
 

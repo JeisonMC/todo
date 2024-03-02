@@ -6,7 +6,6 @@ interface props {
 
 const SectionList = ({ title }: props) => {
   const [checked, setChecked] = useState(false);
- 
 
   const handleCheckboxChange = () => {
     // Lógica que se ejecutará cuando el checkbox cambie de estado
@@ -16,7 +15,6 @@ const SectionList = ({ title }: props) => {
     <>
       <section>
         <label>
-          
           <input
             type="checkbox"
             name="opcion"
