@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Body from './body'
 
 const App = () => {
   const [elementos, setElementos] = useState<string[]>([]);
@@ -57,6 +58,7 @@ const App = () => {
       ))}
 
       <br></br>
+      <Body title={'My todos'} />
     </>
   );
 };
