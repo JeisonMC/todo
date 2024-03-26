@@ -19,7 +19,7 @@ const Body = ({ title }: Props) => {
       .catch((error) => console.log("hubo un error " + error))
       .then((json) => {
         console.log("data " + JSON.stringify(json));
-        setdata(data);
+        setdata(json);
       });
     return () => {};
   }, []);
@@ -27,28 +27,26 @@ const Body = ({ title }: Props) => {
 
   return (
     <>
-      <div className="div_border">
-        <h1> {title} </h1>
-
-        <table>
-          <thead className="encabezado-tabla">
+      <div>{title}</div>
+      <table className="default">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>userId</th>
+        </tr>
+        
+        {data.map((item) => (
+          
             <tr>
-              <th>item</th>
-              <th>nombre</th>
-              <th>userId</th>
-              {data.map((item) => (
-                <tr>
-                  <p>{item.id}</p>
-                  <p>{item.title}</p>
-                  <p>{item.userId}</p>
-                </tr>
-              ))}
+            <td>{item.id}</td>
+            <td>{item.title}</td>
+            <td>{item.userId}</td>
             </tr>
-          </thead>
-        </table>
-      </div>
-
-      <p className="read-the-docs">tabla de consumo microservicio</p>
+          
+        ))}
+        
+      </table>
+      
     </>
   );
 };

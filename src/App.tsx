@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <h1>My todos</h1>
+     <h1>My todos</h1>
       <label>
         <input
           className="inputStyle"
@@ -56,9 +56,9 @@ const App = () => {
           </table>
         </li>
       ))}
-
+ 
       <br></br>
-      <Body title={'My todos'} />
+      <Body title={'Datos de consumo microservicio'} />
     </>
   );
 };
